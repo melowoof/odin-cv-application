@@ -1,0 +1,16 @@
+.input-delete-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.input-delete-group .input-container {
+    /* flex: 60%; */
+    flex-grow: 1;
+}
+
+.input-delete-group .icon-button {
+    /* flex: 0 0 20%; */
+    margin: 10px 0 10px 10px;
+}

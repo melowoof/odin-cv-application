@@ -1,0 +1,9 @@
+.sidebar {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  padding-right: 22px;
+  /* margin: 30px; */
+  min-width: 250px;
+}

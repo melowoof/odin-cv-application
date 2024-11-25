@@ -1,0 +1,64 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-container {
+  background-color: rgb(251, 251, 251);
+  border-radius: 15px;
+  box-shadow: 0px 0.5px 2px rgb(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  min-height: 800px;
+  max-height: 800px;
+  /* overflow-y: scroll; */
+  /* height: fit-content; */
+  /* background-color: blue; */
+}
+
+.app-container > .sidebar {
+  flex: 1 1 30%;
+  /* width: 100%; */
+  /* background-color: blue; */
+}
+
+.app-container > .content {
+  flex: 1 1 70%;
+  /* overflow-y: scroll; */
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 10px;
+  /* background-color: red; */
+}
+
+.app-container > .content > .forms-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+  padding: 2px;
+  padding-bottom: 10px;
+  border-radius: 0 10px 0 0;
+}
+
+.app-container > .content > .navigation-buttons-container {
+  /* background-color: red; */
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.line-divider {
+  width: 100%;
+  margin: 50px 0;
+  border: 1px solid black;
+  border-radius: 10px;
+  opacity: 0.2;
+}

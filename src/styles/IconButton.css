@@ -1,0 +1,24 @@
+.icon-button {
+  background-color: rgb(100, 100, 100, 0.1);
+  opacity: 0.5;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  will-change: transform;
+}
+
+.icon-button:hover {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.icon-button .icon {
+  width: 1rem;
+  opacity: 0.4;
+}

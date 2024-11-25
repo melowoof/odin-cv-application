@@ -1,0 +1,30 @@
+.sidebar-item {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 550;
+  display: flex;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: background-color 0.3s;
+}
+
+.sidebar-item.active {
+  /* background-color: rgb(239, 240, 241); */
+  /* background-color: rgb(231, 231, 231); */
+  background-color: rgb(100, 100, 100, 0.1);
+  transition: background-color 0.3s;
+}
+
+/* .sidebar-item:hover {
+  background-color: rgb(239, 240, 241);
+  transition: background-color 0.1s;
+} */
+
+.sidebar-item .icon {
+  width: 1rem;
+  opacity: 0.4;
+}
