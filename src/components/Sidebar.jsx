@@ -42,6 +42,12 @@ function Sidebar({ sidebarItems, selectedItem, setSelected }) {
         isActive={sidebarItems[selectedItem] === "interests"}
         onClick={() => setSelected(5)}
       />
+      <SidebarItem
+        text={"Preview CV"}
+        icon={"src/assets/icons/icons8-download-24.png"}
+        isActive={sidebarItems[selectedItem] === "resume"}
+        onClick={() => setSelected(6)}
+      />
     </div>
   );
 }

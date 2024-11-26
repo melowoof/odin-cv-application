@@ -12,6 +12,7 @@ function App() {
     "skills",
     "languages",
     "interests",
+    "resume",
   ];
   const [selectedSidebarItem, setSelectedSidebarItem] = useState(0);
 

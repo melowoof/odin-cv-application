@@ -4,9 +4,10 @@ import "../../styles/FormsContainer.css";
 import PersonalForm from "./PersonalForm";
 import EducationForm from "./EducationForm";
 import EmploymentForm from "./EmploymentForm";
-import SkillsForm from "./SkillsForm";
+import DeletableInput from "./DeletableInput";
 import Button from "../buttons/Button";
 import { Fragment } from "react";
+import Resume from "../Resume";
 
 function FormsContainer({ selectedSidebarItem }) {
   const [personalForm, setPersonalForm] = useState({
@@ -28,14 +29,6 @@ function FormsContainer({ selectedSidebarItem }) {
       start: "",
       end: "",
     },
-    {
-      key: Math.random(),
-      qualification: "",
-      school: "",
-      location: "",
-      start: "",
-      end: "",
-    },
   ]);
   const [employmentForms, setEmploymentForms] = useState([
     {
@@ -47,8 +40,14 @@ function FormsContainer({ selectedSidebarItem }) {
       end: "",
     },
   ]);
-  const [skillsForms, setSkillsForms] = useState([
+  const [skillForms, setSkillForms] = useState([
     { key: Math.random(), skill: "" },
+  ]);
+  const [languageForms, setLanguageForms] = useState([
+    { key: Math.random(), language: "" },
+  ]);
+  const [interestForms, setInterestForms] = useState([
+    { key: Math.random(), interest: "" },
   ]);
 
   function getUpdatedForms(forms, id, value, index) {
@@ -171,16 +170,18 @@ function FormsContainer({ selectedSidebarItem }) {
       )}
       {selectedSidebarItem === "skills" && (
         <>
-          {skillsForms.map((formData, index) => (
+          {skillForms.map((formData, index) => (
             <Fragment key={formData.key}>
-              <SkillsForm
-                formData={formData}
+              <DeletableInput
                 handleFormData={(event) =>
-                  handleFormArrayData(event, skillsForms, index, setSkillsForms)
+                  handleFormArrayData(event, skillForms, index, setSkillForms)
                 }
                 handleDeleteForm={() =>
-                  deleteForm(index, skillsForms, setSkillsForms)
+                  deleteForm(index, skillForms, setSkillForms)
                 }
+                id={"skill"}
+                placeholder={"JavaScript"}
+                formDataValue={formData.skill}
               />
             </Fragment>
           ))}
@@ -192,11 +193,93 @@ function FormsContainer({ selectedSidebarItem }) {
                   key: Math.random(),
                   skill: "",
                 },
-                setEmploymentForms
+                setSkillForms
               )
             }
           />
         </>
+      )}
+      {selectedSidebarItem === "languages" && (
+        <>
+          {languageForms.map((formData, index) => (
+            <Fragment key={formData.key}>
+              <DeletableInput
+                handleFormData={(event) =>
+                  handleFormArrayData(
+                    event,
+                    languageForms,
+                    index,
+                    setLanguageForms
+                  )
+                }
+                handleDeleteForm={() =>
+                  deleteForm(index, languageForms, setLanguageForms)
+                }
+                id={"language"}
+                placeholder={"English"}
+                formDataValue={formData.language}
+              />
+            </Fragment>
+          ))}
+          <Button
+            text={"Add Entry"}
+            onClick={() =>
+              addForm(
+                {
+                  key: Math.random(),
+                  language: "",
+                },
+                setLanguageForms
+              )
+            }
+          />
+        </>
+      )}
+      {selectedSidebarItem === "interests" && (
+        <>
+          {interestForms.map((formData, index) => (
+            <Fragment key={formData.key}>
+              <DeletableInput
+                handleFormData={(event) =>
+                  handleFormArrayData(
+                    event,
+                    interestForms,
+                    index,
+                    setInterestForms
+                  )
+                }
+                handleDeleteForm={() =>
+                  deleteForm(index, interestForms, setInterestForms)
+                }
+                id={"interest"}
+                placeholder={"Film"}
+                formDataValue={formData.interest}
+              />
+            </Fragment>
+          ))}
+          <Button
+            text={"Add Entry"}
+            onClick={() =>
+              addForm(
+                {
+                  key: Math.random(),
+                  interest: "",
+                },
+                setInterestForms
+              )
+            }
+          />
+        </>
+      )}
+      {selectedSidebarItem === "resume" && (
+        <Resume
+          personalForm={personalForm}
+          educationForms={educationForms}
+          employmentForms={employmentForms}
+          skillForms={skillForms}
+          languageForms={languageForms}
+          interestForms={interestForms}
+        />
       )}
     </div>
   );
