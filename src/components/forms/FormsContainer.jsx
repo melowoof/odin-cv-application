@@ -29,30 +29,6 @@ function FormsContainer({ selectedSidebarItem }) {
       start: "08/2021",
       end: "05/2024",
     },
-    {
-      key: Math.random(),
-      qualification: "Bachelors of Computer Engineering",
-      school: "Lycée Français de New York",
-      location: "New York",
-      start: "08/2021",
-      end: "05/2024",
-    },
-    {
-      key: Math.random(),
-      qualification: "Bachelors of Computer Engineering",
-      school: "Lycée Français de New York",
-      location: "New York",
-      start: "08/2021",
-      end: "05/2024",
-    },
-    {
-      key: Math.random(),
-      qualification: "Bachelors of Computer Engineering",
-      school: "Lycée Français de New York",
-      location: "New York",
-      start: "08/2021",
-      end: "05/2024",
-    },
   ]);
   const [employmentForms, setEmploymentForms] = useState([
     {
