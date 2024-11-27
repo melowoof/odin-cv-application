@@ -1,9 +1,139 @@
+.pdf-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .resume {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  /* gap: 20px; */
   box-shadow: 0px 0.5px 2px rgb(0, 0, 0, 0.4);
-  padding: 30px;
+  /* padding: 30px; */
   border-radius: 10px;
   background-color: white;
+}
+
+.resume .header {
+  padding: 30px;
+  border-radius: 10px 10px 0 0;
+  color: white;
+  /* background-color: rgb(120, 184, 86); */
+  background-color: rgb(139, 140, 140);
+}
+
+.resume .name {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.resume .header-info {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  font-weight: 500;
+}
+
+.resume .header-info > div {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume .header-info .icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.resume .body {
+  display: flex;
+}
+
+.resume .body .main-body {
+  flex: 75%;
+}
+
+.resume .body .main-body .sections {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.resume .body .sidebar-body {
+  background-color: rgb(0, 0, 0, 0.1);
+  /* border-left: 2px solid black; */
+  flex: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.resume .sidebar-body .list-item {
+  font-size: 0.9rem;
+}
+
+.resume .body .sidebar-body .section-sidebar-title {
+  /* font-size: 1.1rem; */
+  border-bottom: 1px solid black;
+}
+
+.resume .section-container {
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 40px;
+}
+
+.resume .section-container .section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.resume .section-container .section > div {
+  font-size: 0.85rem;
+}
+
+.resume .section-container .section .qualification {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  /* width: 300px; */
+  /* background-color: yellow; */
+}
+
+.resume .section-container .section .period {
+  /* font-size: 0.7rem; */
+  color: gray;
+  opacity: 0.8;
+}
+
+.resume .section-container .section .desc {
+  margin-top: 15px;
+}
+
+.resume .section-title {
+  font-size: 1.5rem;
+  border-bottom: 2px solid black;
+}
+
+.resume .location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  /* width: fit-content; */
+  /* background-color: red; */
+}
+
+.resume .section .location .icon {
+  width: 0.8rem;
+  height: 0.8rem;
+  /* opacity: 0.4; */
 }
