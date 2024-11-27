@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Sidebar from "./components/Sidebar";
-import Button from "./components/buttons/Button";
+import Button from "./components/common/Button";
 import FormsContainer from "./components/forms/FormsContainer";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     "interests",
     "resume",
   ];
-  const [selectedSidebarItem, setSelectedSidebarItem] = useState(0);
+  const [selectedSidebarItem, setSelectedSidebarItem] = useState(6); // Current selected sidebar item, from index 0 to 6
 
   return (
     <div className="app-container">
