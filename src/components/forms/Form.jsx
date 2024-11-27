@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import "../../styles/Form.css";
-import IconButton from "../buttons/IconButton";
+import IconButton from "../common/IconButton";
 
 function Form({ title, children, hasDeleteButton = false, handleDeleteForm }) {
   return (

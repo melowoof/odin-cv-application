@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import Input from "../Input";
-import IconButton from "../buttons/IconButton";
+import Input from "../common/Input";
+import IconButton from "../common/IconButton";
 import "../../styles/DeletableInput.css";
 
 function DeletableInput({

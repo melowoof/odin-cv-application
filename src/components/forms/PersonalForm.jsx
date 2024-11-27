@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import Input from "../Input";
+import Input from "../common/Input";
 import Form from "./Form";
-import Textarea from "../Textarea";
+import Textarea from "../common/Textarea";
 
 function PersonalForm({ formData, handleFormData }) {
   return (

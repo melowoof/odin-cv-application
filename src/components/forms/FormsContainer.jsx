@@ -5,49 +5,74 @@ import PersonalForm from "./PersonalForm";
 import EducationForm from "./EducationForm";
 import EmploymentForm from "./EmploymentForm";
 import DeletableInput from "./DeletableInput";
-import Button from "../buttons/Button";
+import Button from "../common/Button";
 import { Fragment } from "react";
 import Resume from "../Resume";
 
 function FormsContainer({ selectedSidebarItem }) {
   const [personalForm, setPersonalForm] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    address: "",
-    linkedin: "",
-    portfolio: "",
-    desc: "",
+    firstName: "Lizzy",
+    lastName: "Grant",
+    email: "honeymoon@gmail.com",
+    phone: "555-9275",
+    address: "Paris, USA",
+    linkedin: "Honeymoon",
+    portfolio: "www.lanadelrey.com",
+    desc: "Lana Del Rey is an american artist",
   });
   const [educationForms, setEducationForms] = useState([
     {
       key: Math.random(),
-      qualification: "",
-      school: "",
-      location: "",
-      start: "",
-      end: "",
+      qualification: "Bachelors of Computer Engineering",
+      school: "Lycée Français de New York",
+      location: "New York",
+      start: "08/2021",
+      end: "05/2024",
+    },
+    {
+      key: Math.random(),
+      qualification: "Bachelors of Computer Engineering",
+      school: "Lycée Français de New York",
+      location: "New York",
+      start: "08/2021",
+      end: "05/2024",
+    },
+    {
+      key: Math.random(),
+      qualification: "Bachelors of Computer Engineering",
+      school: "Lycée Français de New York",
+      location: "New York",
+      start: "08/2021",
+      end: "05/2024",
+    },
+    {
+      key: Math.random(),
+      qualification: "Bachelors of Computer Engineering",
+      school: "Lycée Français de New York",
+      location: "New York",
+      start: "08/2021",
+      end: "05/2024",
     },
   ]);
   const [employmentForms, setEmploymentForms] = useState([
     {
       key: Math.random(),
-      position: "",
-      employer: "",
-      location: "",
-      start: "",
+      position: "Back End Developer",
+      employer: "Twitter",
+      location: "California, USA",
+      start: "09/2026",
       end: "",
+      desc: "Responsible for implementing UI designs on the front end. ",
     },
   ]);
   const [skillForms, setSkillForms] = useState([
-    { key: Math.random(), skill: "" },
+    { key: Math.random(), skill: "Singing" },
   ]);
   const [languageForms, setLanguageForms] = useState([
-    { key: Math.random(), language: "" },
+    { key: Math.random(), language: "English" },
   ]);
   const [interestForms, setInterestForms] = useState([
-    { key: Math.random(), interest: "" },
+    { key: Math.random(), interest: "Music" },
   ]);
 
   function getUpdatedForms(forms, id, value, index) {
@@ -161,6 +186,7 @@ function FormsContainer({ selectedSidebarItem }) {
                   location: "",
                   start: "",
                   end: "",
+                  desc: "",
                 },
                 setEmploymentForms
               )
@@ -272,14 +298,28 @@ function FormsContainer({ selectedSidebarItem }) {
         </>
       )}
       {selectedSidebarItem === "resume" && (
-        <Resume
-          personalForm={personalForm}
-          educationForms={educationForms}
-          employmentForms={employmentForms}
-          skillForms={skillForms}
-          languageForms={languageForms}
-          interestForms={interestForms}
-        />
+        <>
+          <Resume
+            personalForm={personalForm}
+            educationForms={educationForms}
+            employmentForms={employmentForms}
+            skillForms={skillForms}
+            languageForms={languageForms}
+            interestForms={interestForms}
+          />
+          {/* <Button
+            text={"Download PDF"}
+            onClick={() =>
+              addForm(
+                {
+                  key: Math.random(),
+                  interest: "",
+                },
+                setInterestForms
+              )
+            }
+          /> */}
+        </>
       )}
     </div>
   );

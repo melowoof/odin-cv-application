@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import Input from "../Input";
+import Input from "../common/Input";
 import Form from "./Form";
 
 function EducationForm({ formData, handleFormData, handleDeleteForm }) {

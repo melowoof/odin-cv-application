@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import Form from "./Form";
-import Input from "../Input";
-import Textarea from "../Textarea";
+import Input from "../common/Input";
+import Textarea from "../common/Textarea";
 
 function EmploymentForm({ formData, handleFormData, handleDeleteForm }) {
   return (
@@ -61,7 +61,9 @@ function EmploymentForm({ formData, handleFormData, handleDeleteForm }) {
           id={"desc"}
           label={"Description"}
           rows={5}
-          placeholder={"Descriptions of tasks, responsibilities, or achievements you've had in this role."}
+          placeholder={
+            "Descriptions of tasks, responsibilities, or achievements you've had in this role."
+          }
           value={formData.desc}
           onChange={handleFormData}
         />
