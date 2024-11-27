@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useRef } from "react";
 import "../styles/Resume.css";
 import Button from "./common/Button";
-// import html2canvas from "html2canvas";
-// import jsPDF from "jspdf";
+import html2canvas from "../../node_modules/html2canvas";
+import jsPDF from "../../node_modules/jspdf";
 
 function Resume({
   personalForm,
@@ -13,36 +12,47 @@ function Resume({
   languageForms,
   interestForms,
 }) {
-  const resumeRef = useRef();
-
   function downloadPDF() {
-    html2canvas(resumeRef.current, { scale: 2 }).then((canvas) => {
+    html2canvas(document.querySelector(".resume")).then((canvas) => {
       const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF();
-      const imgWidth = 190;
-      const pageHeight = pdf.internal.pageSize.height;
+
+      // Create a new jsPDF instance
+      const pdf = new jsPDF({
+        orientation: "portrait", // or "landscape"
+        unit: "mm",
+        format: "a4",
+        putOnlyUsedFonts: true,
+        floatPrecision: 16, // or "smart", default is 16
+      });
+
+      // Calculate the width and height of the PDF
+      const imgWidth = 210; // A4 width in mm
+      const pageHeight = 295; // A4 height in mm
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
       let heightLeft = imgHeight;
 
       let position = 0;
 
-      pdf.addImage(imgData, "PNG", 10, position, imgWidth, imgHeight);
+      // Add the image to the PDF
+      pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
       heightLeft -= pageHeight;
 
+      // If the image height is greater than the page height, add new pages
       while (heightLeft >= 0) {
         position = heightLeft - imgHeight;
         pdf.addPage();
-        pdf.addImage(imgData, "PNG", 10, position, imgWidth, imgHeight);
+        pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
         heightLeft -= pageHeight;
       }
 
+      // Save the PDF
       pdf.save("resume.pdf");
     });
   }
 
   return (
     <div className="pdf-container">
-      <div className="resume" ref={resumeRef}>
+      <div className="resume">
         <div className="header">
           <h1 className="name">
             {personalForm.firstName} {personalForm.lastName}
@@ -90,6 +100,12 @@ function Resume({
         </div>
         <div className="body">
           <div className="main-body">
+            <div className="section-container">
+              {personalForm.desc && (
+                <h2 className="section-title">Biography</h2>
+              )}
+              <div className="sections">{personalForm.desc}</div>
+            </div>
             <div className="section-container">
               {educationForms.length > 0 && (
                 <h2 className="section-title">Education</h2>
