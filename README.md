@@ -1,8 +1,35 @@
-# React + Vite
+# Cv-builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simplistic frontend demo for a CV builder.
 
-Currently, two official plugins are available:
+## [Demo](https://odin-cv-application-1rs.pages.dev)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![[Safari_Personal — CV Builder_1127_QUtio3Zk@2x.jpg]]
+![[Safari_Personal — CV Builder_1127_klgeB4DE@2x.jpg]]
+
+## Features
+
+Enter your information into categorized forms to fill in the CV
+Add additional entries as needed
+Download the CV in PDF format
+
+## Tech Stack
+
+React
+Vite
+JavaScript
+CSS
+**Hosting service:** Cloudflare
+**Dependencies:** html2canvas, jsPDF
+
+## Main Directories
+
+Located in `src`
+
+- `components/`: JSX components
+- `styles/`: CSS stylesheets
+- `icons/`: PNG icons
+
+## Acknowledgements
+
+[Design inspo](https://dribbble.com/shots/24855426-Simple-Poll-Modal-Question-Answers)
