@@ -9,7 +9,9 @@ function Form({ title, children, hasDeleteButton = false, handleDeleteForm }) {
         <h4 className="form-title">{title}</h4>
         {hasDeleteButton && (
           <IconButton
-            icon={"src/assets/icons/icons8-long-x-24.png"}
+            icon={
+              "https://img.icons8.com/?size=100&id=Qgjnp78cDeJi&format=png&color=000000"
+            }
             onClick={handleDeleteForm}
           />
         )}

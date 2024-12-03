@@ -8,43 +8,57 @@ function Sidebar({ sidebarItems, selectedItem, setSelected }) {
       {" "}
       <SidebarItem
         text={"Personal details"}
-        icon={"src/assets/icons/icons8-user-24.png"}
+        icon={
+          "https://img.icons8.com/?size=100&id=c9qBeYd2uXYG&format=png&color=000000"
+        }
         isActive={sidebarItems[selectedItem] === "personal"}
         onClick={() => setSelected(0)}
       />
       <SidebarItem
         text={"Education"}
-        icon={"src/assets/icons/icons8-diploma-24.png"}
+        icon={
+          "https://img.icons8.com/?size=100&id=VqhURg0aF70F&format=png&color=000000"
+        }
         isActive={sidebarItems[selectedItem] === "education"}
         onClick={() => setSelected(1)}
       />
       <SidebarItem
         text={"Employment"}
-        icon={"src/assets/icons/icons8-work-24.png"}
+        icon={
+          "https://img.icons8.com/?size=100&id=VfUYnBLRi9Of&format=png&color=000000"
+        }
         isActive={sidebarItems[selectedItem] === "employment"}
         onClick={() => setSelected(2)}
       />
       <SidebarItem
         text={"Skills"}
-        icon={"src/assets/icons/icons8-popular-man-24.png"}
+        icon={
+          "https://img.icons8.com/?size=100&id=cnINj0lkP720&format=png&color=000000"
+        }
         isActive={sidebarItems[selectedItem] === "skills"}
         onClick={() => setSelected(3)}
       />
       <SidebarItem
         text={"Languages"}
-        icon={"src/assets/icons/icons8-world-24.png"}
+        icon={
+          "https://img.icons8.com/?size=100&id=k3HwOfdGB5IM&format=png&color=000000"
+        }
         isActive={sidebarItems[selectedItem] === "languages"}
         onClick={() => setSelected(4)}
       />
       <SidebarItem
         text={"Interests & hobbies"}
-        icon={"src/assets/icons/icons8-trekking-24.png"}
+        icon={
+          "https://img.icons8.com/?size=100&id=eB5SCJrSiRyS&format=png&color=000000"
+        }
         isActive={sidebarItems[selectedItem] === "interests"}
         onClick={() => setSelected(5)}
       />
       <SidebarItem
-        text={"Preview CV"}
-        icon={"src/assets/icons/icons8-download-24.png"}
+        text={"Preview"}
+        icon={
+          "https://img.icons8.com/?size=100&id=RzBtKwnyPvYk&format=png&color=000000"
+        }
         isActive={sidebarItems[selectedItem] === "resume"}
         onClick={() => setSelected(6)}
       />

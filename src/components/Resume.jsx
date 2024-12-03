@@ -60,7 +60,7 @@ function Resume({
           <div className="header-info">
             <div className="email">
               <img
-                src="src/assets/icons/icons8-email-24-3.png"
+                src="https://img.icons8.com/?size=100&id=2Iqkj2l7vYcT&format=png&color=FFFFFF"
                 className="icon"
               />
               {personalForm.email}
@@ -68,14 +68,14 @@ function Resume({
             <div className="phone">
               <img
                 className="icon"
-                src="src/assets/icons/icons8-phone-24-2.png"
+                src="https://img.icons8.com/?size=100&id=Fld0fUcMNHLy&format=png&color=FFFFFF"
               />
               {personalForm.phone}
             </div>
             <div className="address">
               {" "}
               <img
-                src="src/assets/icons/icons8-location-24-3.png"
+                src="https://img.icons8.com/?size=100&id=P0gmIJVn1Rro&format=png&color=FFFFFF"
                 className="icon"
               />
               {personalForm.address}
@@ -85,13 +85,13 @@ function Resume({
             <div className="portfolio">
               <img
                 className="icon"
-                src="src/assets/icons/icons8-website-24.png"
+                src="https://img.icons8.com/?size=100&id=yFplqz910Qns&format=png&color=FFFFFF"
               />
               {personalForm.portfolio}
             </div>
             <div className="linkedin">
               <img
-                src="src/assets/icons/icons8-linkedin-24.png"
+                src="https://img.icons8.com/?size=100&id=shr5oEjbrsb5&format=png&color=FFFFFF"
                 className="icon"
               />
               {personalForm.linkedin}
@@ -119,7 +119,7 @@ function Resume({
                     <div className="location">
                       <img
                         className="icon"
-                        src="src/assets/icons/icons8-location-24-2.png"
+                        src="https://img.icons8.com/?size=100&id=P0gmIJVn1Rro&format=png&color=000000"
                       />
                       {formData.location}
                     </div>
@@ -144,7 +144,7 @@ function Resume({
                       {" "}
                       <img
                         className="icon"
-                        src="src/assets/icons/icons8-location-24-2.png"
+                        src="https://img.icons8.com/?size=100&id=P0gmIJVn1Rro&format=png&color=000000"
                       />
                       {formData.location}
                     </div>
