@@ -14,7 +14,7 @@ function App() {
     "interests",
     "resume",
   ];
-  const [selectedSidebarItem, setSelectedSidebarItem] = useState(6); // Current selected sidebar item, from index 0 to 6
+  const [selectedSidebarItem, setSelectedSidebarItem] = useState(0); // Current selected sidebar item, from index 0 to 6
 
   return (
     <div className="app-container">
