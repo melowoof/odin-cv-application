@@ -1,11 +1,11 @@
 # Cv-builder
 
-A simplistic frontend demo for a CV builder.
+A simple frontend demo for a CV builder.
 
 ## [Demo](https://odin-cv-application-1rs.pages.dev)
 
-![alt text](<Safari_Personal — CV Builder_1127_QUtio3Zk@2x-1.jpg>)
-![alt text](<Safari_Personal — CV Builder_1127_klgeB4DE@2x-1.jpg>)
+![alt text](<preview-edu-page.jpg>)
+![alt text](<preview-cv-page.jpg>)
 
 ## Features
 
